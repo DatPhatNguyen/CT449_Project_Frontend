@@ -4,21 +4,21 @@ export default {
 		project: { type: Object, required: true },
 	},
 	el: '#container',
-//   data() {
-//     return {
-//       text: 'Text to copy',
-//     }
-//   },
-  methods: {
-    copy() {
-      try {
-        navigator.clipboard.writeText(this.project.link);
-		alert('Bạn đã copy thành công link dự án '+ this.project.name);
-      } catch (e) {
-        throw e
-      }
-    }
-  },
+	//   data() {
+	//     return {
+	//       text: 'Text to copy',
+	//     }
+	//   },
+	methods: {
+		copy() {
+			try {
+				navigator.clipboard.writeText(this.project.link);
+				alert('Bạn đã copy thành công link dự án ' + this.project.name);
+			} catch (e) {
+				throw e
+			}
+		}
+	},
 };
 
 </script>
@@ -26,7 +26,7 @@ export default {
 <template>
 	<div>
 		<div class="p-1">
-			<strong>Tên dự án:</strong>
+			<strong>Tên môn học:</strong>
 			{{ project.name }}
 		</div>
 		<div class="p-1">
@@ -35,12 +35,13 @@ export default {
 		</div>
 		<div class="p-1">
 			<strong>Nơi lưu trữ:</strong><br>
-			{{ project.link }} 
-			
+			{{ project.link }}
+
 		</div>
 		<div class="p-1">
-			<button @click="copy" style="background-color:darkgrey; border-radius: 5px; float: right;  font-weight: bold;">Copy link</button>
-		</div>	
+			<button @click="copy"
+				style="background-color:darkgrey; border-radius: 5px; float: right;  font-weight: bold;">Copy link</button>
+		</div>
 
 	</div>
 </template>

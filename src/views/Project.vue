@@ -5,11 +5,11 @@
 		</div>
 		<div class="mt-3 col-md-6">
 			<h4 class="my-4">
-				Danh sách các dự án / môn học
+				Danh sách các môn học
 				<i class="fa-solid fa-clipboard-list"></i>
 			</h4>
 			<ProjectList v-if="filteredProjectsCount > 0" :projects="filteredProjects" v-model:activeIndex="activeIndex" />
-			<p v-else>Không có dự án / môn học nào.</p>
+			<p v-else>Không có môn học nào được thêm.</p>
 			<div class="mt-3 row justify-content-around  align-items-center">
 				<button class="btn btn-sm btn-primary p-2 " @click="refreshList()">
 					<i class="fas fa-redo"></i> Làm mới
@@ -17,7 +17,6 @@
 				<button class="btn btn-sm btn-success p-2" @click="goToAddProject">
 					<i class="fas fa-plus"></i> Thêm mới
 				</button>
-
 				<button class="btn btn-sm btn-danger p-2" @click="removeAllProjects">
 					<i class="fas fa-trash"></i> Xóa tất cả
 				</button>
@@ -25,8 +24,8 @@
 		</div>
 		<div class="col-md-12">
 			<div v-if="activeProject" class="my-5 col-md-12 border border-1 p-4">
-				<h4>
-					Chi tiết dự án
+				<h4 class="text-capitalize">
+					Chi tiết môn học
 					<i class="fa-solid fa-clipboard-check"></i>
 				</h4>
 				<ProjectCard :project="activeProject" />

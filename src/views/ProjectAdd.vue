@@ -1,7 +1,7 @@
 <template>
 	<div class="page">
 		<div class="border border-1 p-3 mt-5">
-			<h4 class="text-center p-3 text-capitalize">Thêm dự án mới</h4>
+			<h4 class="text-center p-3 text-capitalize">Thêm môn học mới</h4>
 			<ProjectForm :project="{}" :resetAfterSubmit="false" @submit:project="saveProject" />
 		</div>
 	</div>

@@ -1,31 +1,29 @@
 <template>
 	<Form ref="projectForm" @submit="submitProject" :validation-schema="projectFormSchema">
 		<div class="form-group " style="margin-bottom: 16px">
-			<label for="name" style="font-weight:bold">Tên dự án:</label>
+			<label for="name" style="font-weight:bold">Tên môn học:</label>
 			<Field name="name" type="text" class="form-control" v-model="projectLocal.name"
-				placeholder="Nhập vào tên dự án" />
+				placeholder="Nhập vào tên môn học" />
 			<ErrorMessage name="name" class="error-feedback" />
 		</div>
 		<div class="form-group " style="margin-bottom: 16px">
 			<label for="decripsion" style="font-weight:bold">Mô tả:</label>
 			<textarea v-model="projectLocal.decripsion" class="form-control"
-				placeholder="Nhập vào mô tả của dự án"></textarea>
-
+				placeholder="Nhập vào mô tả của môn học"></textarea>
 			<ErrorMessage name="decripsion" class="error-feedback" />
 		</div>
 		<div class="form-group " style="margin-bottom: 16px">
 			<label for="link" style="font-weight:bold">Địa chỉ lưu trữ:</label>
 			<Field name="link" type="text" class="form-control" v-model="projectLocal.link"
-				placeholder="Nhập link lưu trữ của dự án" />
+				placeholder="Nhập link lưu trữ của môn học" />
 			<ErrorMessage name="link" class="error-feedback" />
 		</div>
 
-
 		<div class="form-group" style="margin-top: 16px;">
-			<button class="btn btn-primary">
+			<button class="btn btn-primary btn-block">
 				<i class="fas fa-save"></i> Lưu
 			</button>
-			<button v-if="projectLocal._id" type="button" class="ml-2 btn btn-danger" @click="deleteProject">
+			<button v-if="projectLocal._id" type="button" class="btn btn-danger btn-block " @click="deleteProject">
 				<i class="fas fa-trash"></i> Xóa
 			</button>
 		</div>

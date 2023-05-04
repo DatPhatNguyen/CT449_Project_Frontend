@@ -1,6 +1,6 @@
 <template>
 	<nav class="navbar navbar-expand navbar-dark bg-primary py-3 d-flex ">
-		<div><a href="/" class="navbar-brand">Ứng dụng quản lý dự án</a></div>
+		<div><a href="/" class="navbar-brand">Ứng dụng quản lý môn học</a></div>
 		<div v-if="currentUser" class="navbar-nav">
 			<div class="d-flex">
 				<li class="nav-item">
@@ -25,12 +25,14 @@
 		</div>
 
 
-		<div v-if="!currentUser" class="navbar-nav">
+		<div v-if="!currentUser" class="navbar-nav ml-auto align-items-center">
 			<li class="nav-item  ">
-				<router-link :to="{ name: 'login' }" class="nav-link">Đăng nhập</router-link>
+				<router-link :to="{ name: 'login' }" class="nav-link text-white"><button class="btn btn-warning">Đăng
+						Nhập</button></router-link>
 			</li>
 			<li class="nav-item ">
-				<router-link :to="{ name: 'register' }" class="nav-link">Đăng ký</router-link>
+				<router-link :to="{ name: 'register' }" class="nav-link text-white"><button class="btn btn-success">Đăng
+						Ký</button></router-link>
 			</li>
 
 		</div>

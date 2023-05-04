@@ -1,61 +1,37 @@
 <template>
 	<div class="col-md-12">
 		<div class="card card-container">
-			<img
-				id="profile-img"
-				src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-				alt="Cannot load the image"
-				class="profile-img-card"
-			/>
-			<Form
-				@submit="handleRegister"
-				:validation-schema="registerFormSchema"
-			>
+			<img id="profile-img"
+				src="https://banner2.cleanpng.com/20180329/zue/kisspng-computer-icons-user-profile-person-5abd85306ff7f7.0592226715223698404586.jpg"
+				alt="Cannot load the image" class="profile-img-card" />
+			<Form @submit="handleRegister" :validation-schema="registerFormSchema">
 				<div v-if="!successful">
 					<div class="form-group">
-						<label for="username">Tên đăng nhập</label>
-						<Field
-							name="username"
-							type="text"
-							class="form-control"
-						/>
+						<label for="username" style="font-weight:bold">Tên đăng nhập:</label>
+						<Field name="username" type="text" class="form-control" placeholder="Tên đăng nhập của bạn..." />
 						<ErrorMessage name="username" class="error-feedback" />
 					</div>
 					<div class="form-group">
-						<label for="email">E-mail</label>
-						<Field name="email" type="email" class="form-control" />
+						<label for="email" style="font-weight:bold">E-mail:</label>
+						<Field name="email" type="email" class="form-control" placeholder="E-mail của bạn..." />
 						<ErrorMessage name="email" class="error-feedback" />
 					</div>
 					<div class="form-group">
-						<label for="password">Mật khẩu</label>
-						<Field
-							name="password"
-							type="password"
-							class="form-control"
-						/>
+						<label for="password" style="font-weight:bold">Mật khẩu:</label>
+						<Field name="password" type="password" class="form-control" placeholder="Mật khẩu của bạn..." />
 						<ErrorMessage name="password" class="error-feedback" />
 					</div>
 
 					<div class="form-group">
-						<button
-							class="btn btn-primary btn-block"
-							:disabled="loading"
-						>
-							<span
-								v-show="loading"
-								class="spinner-border spinner-border-sm"
-							></span>
+						<button class="btn btn-primary btn-block" :disabled="loading">
+							<span v-show="loading" class="spinner-border spinner-border-sm"></span>
 							Đăng ký
 						</button>
 					</div>
 				</div>
 			</Form>
 
-			<div
-				v-if="message"
-				class="alert"
-				:class="successful ? 'alert-success' : 'alert-danger'"
-			>
+			<div v-if="message" class="alert" :class="successful ? 'alert-success' : 'alert-danger'">
 				{{ message }}
 			</div>
 		</div>
