@@ -21,8 +21,7 @@ export default {
 			try {
 				await ProjectService.create(data);
 				swtoast.success({
-					text: "Dự án được thêm thành công.",
-
+					text: "Môn học được thêm thành công.",
 				});
 				this.$router.push({ name: "project" });
 			} catch (error) {

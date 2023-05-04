@@ -1,6 +1,6 @@
 <template>
 	<div v-if="project" class="page border border-1 p-3 mt-5">
-		<h4 class="text-center">Chỉnh sửa dự án</h4>
+		<h4 class="text-center text-capitalize">Chỉnh sửa môn học</h4>
 		<ProjectForm :project="project" @submit:project="updateProject" @delete:project="deleteProject" />
 	</div>
 </template>
@@ -41,7 +41,7 @@ export default {
 			try {
 				await ProjectService.update(this.project._id, data);
 				swtoast.success({
-					text: "Dự án được cập nhật thành công.",
+					text: "Môn học được cập nhật thành công.",
 				});
 				this.$router.push({ name: "project" });
 			} catch (error) {
@@ -55,9 +55,9 @@ export default {
 		async deleteProject() {
 			swalert
 				.fire({
-					title: "Xóa dự án",
+					title: "Xóa môn học",
 					icon: "warning",
-					text: "Bạn muốn xóa dự án này?",
+					text: "Bạn muốn xóa môn học này?",
 					showCloseButton: true,
 					showCancelButton: true,
 				})
@@ -66,7 +66,7 @@ export default {
 						try {
 							await ProjectService.delete(this.project._id);
 							swtoast.success({
-								text: "Dự án được xóa thành công.",
+								text: "Môn học được xóa thành công.",
 							});
 							this.$router.push({ name: "project" });
 						} catch (error) {

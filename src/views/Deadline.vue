@@ -13,15 +13,15 @@
 			<p v-else>Không có liên hệ nào.</p>
 
 			<div class="mt-3 row justify-content-around align-items-center">
-				<button class="btn btn-sm btn-primary p-2" @click="refreshList()">
+				<button class="btn btn-sm btn-primary p-2 text-capitalize" @click="refreshList()">
 					<i class="fas fa-redo"></i> Làm mới
 				</button>
 
-				<button class="btn btn-sm btn-success p-2" @click="goToAddDeadline">
+				<button class="btn btn-sm btn-success p-2 text-capitalize" @click="goToAddDeadline">
 					<i class="fas fa-plus"></i> Thêm mới
 				</button>
 
-				<button class="btn btn-sm btn-danger p-2" @click="removeAllDeadlines">
+				<button class="btn btn-sm btn-danger p-2 text-capitalize" @click="removeAllDeadlines">
 					<i class="fas fa-trash"></i> Xóa tất cả
 				</button>
 			</div>
@@ -38,7 +38,7 @@
 						params: { id: activeDeadline._id },
 					}">
 					<span class="mt-2 p-2 badge badge-warning">
-						<i class="fas fa-edit"></i> Chỉnh sửa</span>
+						<i class="fas fa-edit"></i> Chỉnh Sửa</span>
 				</router-link>
 			</div>
 		</div>

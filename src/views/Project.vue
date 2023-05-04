@@ -11,13 +11,13 @@
 			<ProjectList v-if="filteredProjectsCount > 0" :projects="filteredProjects" v-model:activeIndex="activeIndex" />
 			<p v-else>Không có môn học nào được thêm.</p>
 			<div class="mt-3 row justify-content-around  align-items-center">
-				<button class="btn btn-sm btn-primary p-2 " @click="refreshList()">
+				<button class="btn btn-sm btn-primary p-2 text-capitalize " @click="refreshList()">
 					<i class="fas fa-redo"></i> Làm mới
 				</button>
-				<button class="btn btn-sm btn-success p-2" @click="goToAddProject">
+				<button class="btn btn-sm btn-success p-2 text-capitalize" @click="goToAddProject">
 					<i class="fas fa-plus"></i> Thêm mới
 				</button>
-				<button class="btn btn-sm btn-danger p-2" @click="removeAllProjects">
+				<button class="btn btn-sm btn-danger p-2 text-capitalize" @click="removeAllProjects">
 					<i class="fas fa-trash"></i> Xóa tất cả
 				</button>
 			</div>
@@ -34,7 +34,7 @@
 						params: { id: activeProject._id },
 					}">
 					<span class="mt-2 badge badge-warning p-2">
-						<i class="fas fa-edit"></i> chỉnh sửa</span>
+						<i class="fas fa-edit"></i> Chỉnh Sửa</span>
 				</router-link>
 			</div>
 		</div>
